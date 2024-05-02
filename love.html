@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8f8f8;
+    }
+
+    #heart {
+      width: 150px;
+      height: 150px;
+      position: relative;
+    }
+
+    #heart:before,
+    #heart:after {
+      position: absolute;
+      content: "";
+      left: 75px;
+      top: 0;
+      width: 75px;
+      height: 112.5px;
+      background-color: red;
+      border-radius: 75px 75px 0 0;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+    }
+
+    #heart:after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
+
+    #message {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    @keyframes heartbeat {
+      0% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 5px rgba(0, 0, 0, 0);
+      }
+      100% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+      }
+    }
+
+    #heart:hover {
+      animation: heartbeat 1s infinite;
+    }
+
+    /* Responsive styles */
+    @media screen and (max-width: 600px) {
+      #heart {
+        width: 100px;
+        height: 100px;
+      }
+
+      #heart:before,
+      #heart:after {
+        width: 50px;
+        height: 75px;
+        left: 50px;
+      }
+
+      #message {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="heart"></div>
+  <div id="message">
+    <p>I love you, [Your Girlfriend's Name]!</p>
+  </div>
+</body>
+</html>
