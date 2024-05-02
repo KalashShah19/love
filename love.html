@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Love Page</title>
+  <title>Love Message</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -16,43 +16,17 @@
       background-color: #f8f8f8;
     }
 
-    #container {
-      text-align: center;
-    }
-
-    #heart {
-      width: 150px;
-      height: 150px;
-      position: relative;
-      margin: 0 auto;
-      animation: heartbeat 1s infinite;
-    }
-
-    #heart:before,
-    #heart:after {
-      position: absolute;
-      content: "";
-      left: 75px;
-      top: 0;
-      width: 75px;
-      height: 112.5px;
-      background-color: red;
-      border-radius: 75px 75px 0 0;
-      transform: rotate(-45deg);
-      transform-origin: 0 100%;
-    }
-
-    #heart:after {
-      left: 0;
-      transform: rotate(45deg);
-      transform-origin: 100% 100%;
+    #mail {
+      width: 100px;
+      cursor: pointer;
     }
 
     #message {
+      display: none;
       text-align: center;
-      margin-top: 20px;
-      font-size: 18px;
+      font-size: 24px;
       color: #333;
+      margin-top: 20px;
     }
 
     @keyframes heartbeat {
@@ -70,32 +44,29 @@
       }
     }
 
-    /* Responsive styles */
-    @media screen and (max-width: 600px) {
-      #heart {
-        width: 100px;
-        height: 100px;
-      }
-
-      #heart:before,
-      #heart:after {
-        width: 50px;
-        height: 75px;
-        left: 50px;
-      }
-
-      #message {
-        font-size: 14px;
-      }
+    #heart {
+      animation: heartbeat 1s infinite;
     }
   </style>
 </head>
 <body>
-  <div id="container">
-    <div id="heart"></div>
-    <div id="message">
-      <p>I love you VIRTI 😘 </p>
-    </div>
+  <img id="mail" src="https://w7.pngwing.com/pngs/692/496/png-transparent-email-materials-technology-inc-yahoo-mail-computer-icons-internet-email-love-miscellaneous-heart.png" alt="Mail" onclick="showMessage()">
+  <div id="message">
+    <p>I love you!</p>
+    <div id="heart">❤️</div>
   </div>
+
+  <script>
+    function showMessage() {
+      var mailIcon = document.getElementById('mail');
+      var messageDiv = document.getElementById('message');
+
+      // Hide mail icon
+      mailIcon.style.display = 'none';
+
+      // Show message with heartbeat animation
+      messageDiv.style.display = 'block';
+    }
+  </script>
 </body>
 </html>
