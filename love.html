@@ -17,8 +17,9 @@
     }
 
     #mail {
-      width: 100px;
+      width: 150px;
       cursor: pointer;
+      animation: fadeIn 1s;
     }
 
     #message {
@@ -27,6 +28,25 @@
       font-size: 24px;
       color: #333;
       margin-top: 20px;
+      animation: fadeOut 1s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
     }
 
     @keyframes heartbeat {
@@ -47,12 +67,23 @@
     #heart {
       animation: heartbeat 1s infinite;
     }
+
+    /* Responsive styles */
+    @media screen and (max-width: 600px) {
+      #mail {
+        width: 100px;
+      }
+
+      #message {
+        font-size: 18px;
+      }
+    }
   </style>
 </head>
 <body>
   <img id="mail" src="https://w7.pngwing.com/pngs/692/496/png-transparent-email-materials-technology-inc-yahoo-mail-computer-icons-internet-email-love-miscellaneous-heart.png" alt="Mail" onclick="showMessage()">
   <div id="message">
-    <p>I love you!</p>
+    <p>I love you VIRTI </p>
     <div id="heart">❤️</div>
   </div>
 
