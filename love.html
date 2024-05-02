@@ -25,6 +25,7 @@
       height: 150px;
       position: relative;
       margin: 0 auto;
+      animation: heartbeat 1s infinite;
     }
 
     #heart:before,
@@ -39,6 +40,9 @@
       border-radius: 75px 75px 0 0;
       transform: rotate(-45deg);
       transform-origin: 0 100%;
+    }
+
+    #heart:after {
       left: 0;
       transform: rotate(45deg);
       transform-origin: 100% 100%;
@@ -66,10 +70,6 @@
       }
     }
 
-    #heart:hover {
-      animation: heartbeat 1s infinite;
-    }
-
     /* Responsive styles */
     @media screen and (max-width: 600px) {
       #heart {
@@ -94,7 +94,7 @@
   <div id="container">
     <div id="heart"></div>
     <div id="message">
-      <p>I love you, VIRTI 😘 </p>
+      <p>I love you VIRTI 😘 </p>
     </div>
   </div>
 </body>
