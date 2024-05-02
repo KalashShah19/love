@@ -50,24 +50,27 @@
     p{
         font-size: 60px;
     }
+
+    h2{
+        text-align: center;
+    }
   </style>
 </head>
 <body>
-  <img id="mail" src="https://w7.pngwing.com/pngs/692/496/png-transparent-email-materials-technology-inc-yahoo-mail-computer-icons-internet-email-love-miscellaneous-heart.png" width="600" height="400" alt="Mail" onclick="showMessage()">
-  <div id="message">
-    <p>I Love You VIRTI</p>
-    <div id="heart">❤️</div>
-  </div>
+    <img id="mail" src="https://w7.pngwing.com/pngs/692/496/png-transparent-email-materials-technology-inc-yahoo-mail-computer-icons-internet-email-love-miscellaneous-heart.png" width="600" height="400" alt="Mail" onclick="showMessage()">  <br>
+    <h2> Message For You! Click </h2> 
+    <div id="message">
+        <p>I Love You VIRTI</p>
+        <div id="heart">❤️</div>
+    </div>
 
   <script>
     function showMessage() {
       var mailIcon = document.getElementById('mail');
       var messageDiv = document.getElementById('message');
 
-      // Hide mail icon
       mailIcon.style.display = 'none';
 
-      // Show message with heartbeat animation
       messageDiv.style.display = 'block';
     }
   </script>
