@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Care for You </title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #ffebf1;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    #button {
+      background-color: #ff8fa3;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px #999;
+      transition: all 0.3s ease;
+    }
+
+    #button:hover {
+      background-color: #ff5c75;
+    }
+
+    #button:active {
+      background-color: #ff5c75;
+      box-shadow: 0 2px #666;
+      transform: translateY(4px);
+    }
+
+    #message {
+      display: none;
+      font-size: 40px;
+      color: #ff8fa3;
+      margin-top: 20px;
+      animation: fadeIn 2s ease-in-out, bounce 1s infinite alternate;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* Responsive styles */
+    @media screen and (max-width: 600px) {
+      #button {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+
+      #message {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button id="button" onclick="showMessage()">A Msg from Guggu to her Dear Guggi </button>
+    <div id="message">Get Well Soon! My Love ❤ I mich uuu </div>
+  </div>
+
+  <script>
+    function showMessage() {
+      var button = document.getElementById('button');
+      var message = document.getElementById('message');
+
+      // Hide button
+      button.style.display = 'none';
+
+      // Show message with animation
+      message.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
